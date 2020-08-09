@@ -31,12 +31,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
    }
   return (
     <Fragment>
-      <section className='container'>
-        <h1 className='large text-primary'>Sign Up</h1>
-        <p className='lead'>
+      
+      <section className='signup'>
+        <h1 className='large text-dark log1'>Sign Up</h1>
+        {/* <p className='lead'>
           <i className='fas fa-user'></i> Create Your Account
-        </p>
-        <form className='form' onSubmit={e => onSubmit(e) }>
+        </p> */}
+        <form className='form log' onSubmit={e => onSubmit(e) }>
           <div className='form-group'>
             <input className='form-control'
             type='text' 
@@ -55,11 +56,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
             value = {email}
             onChange={e => onChange(e)}
              />
-
-            <small className='form-text'>
-              This site uses Gravatar so if you want a profile image, use a
-              Gravatar email
-            </small>
           </div>
           <div className='form-group'>
             <input className='form-control'
@@ -79,10 +75,10 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               onChange={e => onChange(e)}
             />
           </div>
-          <input type='submit' className='btn btn-primary' value='Register' />
+          <input type='submit' className='btn btn-dark form-control' value='Register' />
         </form>
-        <p className='my-1'>
-          Already have an account? <Link to='/login'>LogIn</Link>
+        <p className='my-1 text-dark' >
+          Already have an account? <Link to='/login' className='mr-2 text-primary'>LogIn</Link>
         </p>
       </section>
     </Fragment>

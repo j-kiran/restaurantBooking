@@ -16,15 +16,15 @@ const AddModal = (props) => {
   return (
     <Fragment>
       <div>
-        <Button className="addcontact" color='danger' onClick={toggle}>
-          Add Booking
+        <Button className="add-booking" color='danger' onClick={toggle}>
+          Book Table
         </Button>
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalBody>
             <AddBooking toggle={toggle} />
           </ModalBody>
         </Modal>
-        <BookingList />
+        {/* <BookingList /> */}
       </div>
     </Fragment>
   );

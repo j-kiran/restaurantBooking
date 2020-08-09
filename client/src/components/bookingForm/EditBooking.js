@@ -44,21 +44,19 @@ const EditBooking = ({current, updateBookings, history}) => {
     setEmail('');
     setPhone('');
     setDate('');
-
   };
 
   return (
     <Fragment>
       <div className="edit">
-
-      <h1 className='large text-primary'>Edit Contacts</h1>
-      <p className='lead'>
+      <h1 className='large text-dark log1'>Edit Your Bookings</h1>
+      {/* <p className='lead'>
         <i className='fas fa-user'></i> Let's get some information to Create
         Your Contact
-      </p>
-      <form onSubmit={(e) => onSubmit(e)}>
+      </p> */}
+      <form onSubmit={(e) => onSubmit(e)} className='log'>
         <div className='form-group'>
-          <label htmlFor='name'>Name</label>
+          {/* <label htmlFor='name'>Name</label> */}
           <input
             className='form-control'
             id='name'
@@ -70,7 +68,7 @@ const EditBooking = ({current, updateBookings, history}) => {
                 />
         </div>
         <div className='form-group'>
-          <label htmlFor='email'>Email</label>
+          {/* <label htmlFor='email'>Email</label> */}
           <input
             id='email'
             className='form-control'
@@ -82,7 +80,7 @@ const EditBooking = ({current, updateBookings, history}) => {
             />
         </div>
         <div className='form-group'>
-          <label htmlFor='phone'>phone</label>
+          {/* <label htmlFor='phone'>phone</label> */}
 
           <input
             id='phone'
@@ -95,7 +93,7 @@ const EditBooking = ({current, updateBookings, history}) => {
           />
         </div>
         <div className='form-group'>
-          <label htmlFor='date'>date</label>
+          {/* <label htmlFor='date'>date</label> */}
 
           <input
             id='date'
@@ -107,12 +105,15 @@ const EditBooking = ({current, updateBookings, history}) => {
             onChange={e => setDate(e.target.value)}          
           />
         </div>
-        <button type='submit' className='btn btn-primary'>
+        <button type='submit' className='form-control btn btn-dark'>
           Update
         </button>
-        <Link to='/' className='btn btn-light my-1'>
+        <p>
+        <Link to='/bookings' className='text-primary'>
           Go Back
         </Link>
+        </p>
+    
       </form>
       </div>
 

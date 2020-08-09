@@ -14,9 +14,14 @@ const Navbar = ({auth: {isAuthenticated, loading}, logout}) => {
           Home
         </Link>
       </li>
-
       <li className='nav-item'>
-        <a onClick={logout} href='#!'>
+        <Link to='/bookings' className='nav-link active'>
+          Bookings
+        </Link>
+      </li>
+
+      <li className='nav-item navcol'>
+        <a onClick={logout} href='#!'className='nav-link active'>
           Logout
         </a>
       </li>
@@ -25,11 +30,7 @@ const Navbar = ({auth: {isAuthenticated, loading}, logout}) => {
 
   const guestLinks = (
     <ul className='nav justify-content-end'>
-      <li className='nav-item'>
-        <Link to='/' className='nav-link active'>
-          Home
-        </Link>
-      </li>
+
       <li className='nav-item'>
         <Link to='/register' className='nav-link active'>
           Register
@@ -44,10 +45,10 @@ const Navbar = ({auth: {isAuthenticated, loading}, logout}) => {
   );
 
   return (
-    <nav className='navbar bg-light'>
+    <nav className='navbar bg-dark navbar-custom'>
       <h1>
         <Link to='/' className='nav-link active'>
-          Booking App
+          Food beat
         </Link>
       </h1>
       {<Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}

@@ -1,3 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+/* body{
+  margin: 0;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: greenyellow!important;
+  line-height: 1.6;
+} */
+
+#showcase{
+background-image: url(../public/background2.jpg);
+height: 100vh;
+background-size: cover;
+background-position: center;
+font-size: 60px;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+color: goldenrod;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+line-height: 55px;
+}
+
+.login {
+  height: 400px;
+  width: 400px;
+  margin-top: 100px;
+  margin-left: 322px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-align: -webkit-center;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.signup{
+  height: 500px;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 322px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-align: -webkit-center;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.edit{
+  height: 500px;
+  width: 500px;
+  margin-top: 100px;
+  margin-left: 322px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-align: -webkit-center;
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+
+.edit1{
+  color: #fff !important;
+  background-color: #1d2124 !important;
+  border-color: #171a1d !important;
+}
+
+.log1{
+  padding-top: 23px;
+}
+
+.log{
+  margin-top: 45px;
+}
+
+.add-form {
+  /* margin-left: 82px; */
+  text-align: -webkit-center;
+}
+a {
+  color: burlywood !important;
+  text-decoration: none;
+  justify-content: center !important;
+  background-color: transparent !important;
+}
+
+.home-text{
+  text-align: center !important;
+  align-items: center !important;
+}
+
+
 .card {
   position: relative;
   display: flex;
@@ -16,32 +108,33 @@
 
 .form-control {
   display: block;
-  width: 30% !important;
+  width: 70% !important;
   height: calc(1.5em + .75rem + 2px);
   padding: .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: black!important ;
+  color: rgb(19, 18, 18)!important ;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
+  border: 1px solid #1b1e21 !important;
   border-radius: .25rem;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  margin-left: 10px;
 }
 
 ul{
   list-style-type:none;
 }
 
-.addcontact {
-  /* margin-right: 10px; */
-  margin-left: 69px;
-  margin-top: 56px;
-}
+/* .add-booking {
+  margin-bottom: 49px;
+  margin-left: 557px;
+} */
 
-.edit {
+/* .edit {
   margin-left: 99px;
   margin-top: 77px;
-}
+} */
 
+.btn {font-size: 3vw;}

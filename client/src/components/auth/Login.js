@@ -25,13 +25,10 @@ const Login = ({login, isAuthenticated}) => {
     
       return (
         <Fragment>
-
-          <section className='container'>
-            <h1 className='large text-primary'>Login</h1>
-            <p className='lead'>
-              <i className='fas fa-user'></i> Login to Your Account
-            </p>
-            <form className='form' onSubmit={e => onSubmit(e) }>
+          <div className="container ">
+          <section className='login'>
+            <h1 className='large text-dark log1'>Login</h1>
+            <form className='form log' onSubmit={e => onSubmit(e) }>
 
               <div className='form-group'>
                 <input  className='form-control'
@@ -53,13 +50,14 @@ const Login = ({login, isAuthenticated}) => {
                   onChange={e => onChange(e)}
                 />
               </div>
-              <input type='submit' className='btn btn-primary mb-4' value='Login' />
+              <input type='submit' className='btn btn-dark mb-4 form-control' value='Login' />
   
             </form>
-            <p className='my-1'>
-              Don't have an account? <Link to='/register'>Sign Up</Link>
+            <p className='my-1 text-dark'>
+              Don't have an account? <Link to='/register' className='mr-2 text-primary'>Sign Up</Link>
             </p>
           </section>
+          </div>
         </Fragment>
       );
     };

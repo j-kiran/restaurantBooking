@@ -1,0 +1,5 @@
+{
+    "mongoURI":"mongodb+srv://kiran:password@123@userdir-kw5ot.mongodb.net/user?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
+}
+

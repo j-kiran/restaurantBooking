@@ -18,8 +18,9 @@ const BookingList = ({ getBookings, deleteBooking, setCurrent, booking: {booking
 
   return (
     <Fragment>
-    <div className="data mt-4">
-      <table className='table table-striped'>
+    <div className="container data mt-4">
+      <h1 className="text-dark mb-4">Bookings List</h1>
+      <table className='table table-striped mt-4'>
         <tbody>
           <tr>
             <th scope='col'>Name</th>
@@ -37,8 +38,8 @@ const BookingList = ({ getBookings, deleteBooking, setCurrent, booking: {booking
                 <td>{booking.email}</td>
                 <td>{booking.phone}</td>
                 <td>{moment(booking.date).format('LLL')}</td>
-                <button type="button" className="btn btn-primary mr-3 mt-2" onClick={() =>  deleteBooking(booking._id)}>Delete</button>
-                <Link to='/edit'  onClick={ () =>  setCurrent(booking)} className="btn btn-primary mt-2">Edit</Link>
+                <button type="button" className="btn btn-dark mr-3 mt-2" onClick={() =>  deleteBooking(booking._id)}>Delete</button>
+                <Link to='/edit'  onClick={ () =>  setCurrent(booking)} className="btn btn-dark edit1 mt-2">Edit</Link>
                             
               </tr>
             </tbody>

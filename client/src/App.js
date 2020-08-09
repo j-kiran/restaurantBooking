@@ -6,14 +6,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Provider} from 'react-redux';
 import store from './store';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
-import Addmodal from './components/AddModal';
 import AddBooking from './components/bookingForm/AddBooking';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import setAuthToken from './util/setAuthToken';
 import Navbar from './components/Navbar';
 import EditBooking from './components/bookingForm/EditBooking'
+import BookingList from './components/BookingList'
 import PrivateRoute from './components/Routing/PrivatesRoute';
+import Home from './components/Home'
 import  { loadUser } from './actions/auth'
 import { createHashHistory } from 'history'
 import Alert from './components/Alert'
@@ -31,11 +32,11 @@ const App = () => {
       <Fragment>
         <Router >
           <Navbar />
-          <section className="container">
-            <Alert />
+          <Alert />
+
           <Switch>
             <PrivateRoute exact path='/'>
-              <Addmodal />
+              <Home />
             </PrivateRoute>
             <Route exact path='/login'>
               <Login />
@@ -43,11 +44,13 @@ const App = () => {
             <Route exact path='/register'>
               <Register />
             </Route>
+            <PrivateRoute exact path='/bookings'>
+              <BookingList />
+            </PrivateRoute>
             <PrivateRoute exact path='/edit'>
               <EditBooking />
             </PrivateRoute>
           </Switch>
-          </section>
             </Router>
       </Fragment>
     </Provider>

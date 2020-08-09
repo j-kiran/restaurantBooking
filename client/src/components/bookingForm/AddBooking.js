@@ -27,18 +27,15 @@ const AddBooking = ({ addBookings, history, toggle }) => {
 
   return (
     <Fragment>
-      <h1 className="large text-primary">create Contacts</h1>
-      <p className="lead">
-        <i className="fas fa-user"></i> Let's get some information to Create
-        Your Contact
-      </p>
+      <div className="add-form">
+      <h1 className="large text-dark">Book Table</h1>
       <form className="form" onSubmit={(e) => onSubmit(e)}>
-        <div className="form-group"></div>
+
         <div className="form-group">
           <input
             className="form-control"
             type="text"
-            placeholder="name"
+            placeholder="Name"
             name="name"
             value={name}
             onChange={(e) => onChange(e)}
@@ -48,7 +45,7 @@ const AddBooking = ({ addBookings, history, toggle }) => {
           <input
             className="form-control"
             type="email"
-            placeholder="email"
+            placeholder="Email"
             name="email"
             value={email}
             onChange={(e) => onChange(e)}
@@ -58,7 +55,7 @@ const AddBooking = ({ addBookings, history, toggle }) => {
           <input
             className="form-control"
             type="text"
-            placeholder="phone"
+            placeholder="Phone"
             name="phone"
             value={phone}
             onChange={(e) => onChange(e)}
@@ -68,21 +65,19 @@ const AddBooking = ({ addBookings, history, toggle }) => {
           <input
             className="form-control"
             type="datetime-local"
-            placeholder="date"
+            placeholder="Date"
             name="date"
             value={date}
             onChange={(e) => onChange(e)}
           />
         </div>
-        <input
+        <input 
           type="submit"
           onClick={toggle}
-          className="btn btn-primary my-1"
+          className="form-control btn btn-dark my-1"
         />
-        <Link to="/" className="btn btn-light my-1">
-          Go Back
-        </Link>
-      </form>
+         </form>
+      </div>
     </Fragment>
   );
 };
