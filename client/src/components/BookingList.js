@@ -14,11 +14,38 @@ const BookingList = ({ getBookings, deleteBooking, setCurrent, booking: {booking
     getBookings();
   }, [getBookings]);
 
+  document.oncontextmenu = new Function('return false')
+  document.body.oncut = new Function('return false');
+  document.body.oncopy = new Function('return false');
+  document.body.onpaste = new Function('return false');
+  document.body.onselectstart=new Function("return false")
 
+
+
+  window.addEventListener("keydown", checkKeyPressed, false);
+
+  function checkKeyPressed(e) {
+      if (e.keyCode == "44") {
+        e.cancelBubble = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+          alert("The 'enter' key is pressed.");
+      }
+  }
+
+/** TO DISABLE PRINTS WHIT CTRL+P **/
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key == 'p') {
+        alert('This section is not allowed to print or export to PDF');
+        e.cancelBubble = true;
+        e.preventDefault();
+        e.stopImmediatePropagation();
+    }
+});
 
   return (
     <Fragment>
-    <div className="container data mt-4">
+    <div className="container data mt-4 ">
       <h1 className="text-dark mb-4">Bookings List</h1>
       <table className='table table-striped mt-4'>
         <tbody>
